@@ -4,9 +4,9 @@
 
 而秒杀系统考虑  1.瞬时大并发
 
-​							2.超卖
+​		2.超卖
 
-​							3.性能
+​		3.性能
 
 而这三方面的架构核心理念  需要通过缓存 异步  限流 来保证服务的高并发和高可用
 
@@ -64,8 +64,8 @@
 
 ```go
 负责进行真正的秒杀逻辑判断  1.依次处理Redis队列中的用户请求 
-					    2.限制用户的购买次数
-					    3.并对获得抢购资格的用户生成对应的资格token
+			   2.限制用户的购买次数
+			   3.并对获得抢购资格的用户生成对应的资格token
 
 
 业务流程
@@ -107,8 +107,8 @@ type ServiceInstance struct{
     Host   	  string
     Port   	     int
     Weight 	     int
-    CurWeight    int
-    GrpcPort     int
+    CurWeight        int
+    GrpcPort         int
 }
 ```
 
